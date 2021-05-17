@@ -1,0 +1,12 @@
+Options All -Indexes
+<Files .htaccess>
+    order allow,deny
+    deny from all
+</Files>
+<IfModule mod_mime.c>
+ AddType application/x-javascript .js
+ AddType text/css .css
+</IfModule>
+<FilesMatch ".(eot|ttf|otf|woff|woff2)">
+  Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
